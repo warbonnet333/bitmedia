@@ -1,0 +1,162 @@
+.footer {
+  background-image: url(../../../images/footer_back.png);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  padding: 0 30px;
+  width: 260px;
+  margin: 0 auto;
+
+  &_form {
+    width: 260px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: 80px;
+    text-align: center;
+  }
+
+  &_form .input,
+  &_form .button {
+    width: 95%;
+    height: 30px;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &_form .input {
+    background: #ffffff;
+    border: 1px solid #f1f1f1;
+  }
+
+  &_form .input::placeholder {
+    color: #b9b9b9;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &_form .button {
+    background: #3a80ba;
+    border: 1px solid #3a80ba;
+    color: #ffffff;
+  }
+
+  &_info {
+    margin: 0 auto;
+    width: 260px;
+    display: flex;
+    flex-flow: column;
+    height: 100px;
+
+    &_logo a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    &_rights,
+    &_year {
+      font-size: 16px;
+      line-height: 20px;
+      // margin-bottom: 10px;
+      color: #ffffff;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .footer {
+    width: 708px;
+
+    &_form {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      height: 64px;
+      width: 580px;
+    }
+
+    &_form .input {
+      width: 100%;
+      height: 100%;
+      // margin: 0 auto;
+    }
+
+    &_form .input::placeholder {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    &_form .button {
+      height: 54px;
+      position: absolute;
+      top: 7px;
+      right: 4px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    &_info {
+      width: 500px;
+      padding-top: 30px;
+      flex-flow: row;
+      height: 50px;
+      justify-content: space-between;
+
+      &_rights,
+      &_logo,
+      &_year {
+        width: 30%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .footer {
+    width: 764px;
+    margin: 60px auto 0;
+    height: 184px;
+    padding: 20px 130px 0;
+
+    &_form .button {
+      cursor: pointer;
+    }
+
+    &_info {
+      width: 100%;
+      align-items: center;
+      margin: 33px 0 0;
+
+      &_logo {
+        text-align: left;
+      }
+
+      &_year {
+        text-align: right;
+      }
+    }
+
+    &_info span {
+      width: 33%;
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .footer {
+    width: 1180px;
+
+    &_form {
+      top: 25px;
+    }
+
+    &_info {
+    }
+  }
+}

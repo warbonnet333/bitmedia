@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import "../../../../sass/state";
+
+.section {
+  padding: 0 30px;
+  width: 260px;
+  text-align: center;
+  margin: 0 auto;
+
+  h3 {
+    @include sectionTitle;
+    color: #1a1a1a;
+  }
+
+  &_descr {
+    @include sectionDescr;
+    margin: 50px 0;
+  }
+
+  &_item_title {
+    margin: 0 auto 10px;
+  }
+
+  &_item_descr {
+    margin: 0;
+    color: #7e7e7e;
+  }
+
+  &_list {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+
+    &_title {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    li {
+      @include mobileListItem;
+      margin-bottom: 30px;
+      height: 200px;
+      width: 260px;
+      align-self: center;
+    }
+  }
+
+  &_svg {
+    width: 70px;
+    margin: 25px auto 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .section {
+    width: 708px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .section {
+    width: 764px;
+
+    &_list {
+      flex-flow: row;
+      justify-content: space-between;
+    }
+
+    &_list li {
+      width: 30%;
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .section {
+    width: 1180px;
+
+    &_descr {
+      font-size: 20px;
+      line-height: 142%;
+      width: 780px;
+      margin: 24px auto;
+    }
+
+    &_list {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    &_list li {
+      width: 380px;
+      height: 323px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+    }
+
+    &_svg {
+      width: 106px;
+      margin: 0 auto;
+    }
+
+    &_item_title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 16px;
+    }
+
+    &_item_descr {
+      font-size: 16px;
+      line-height: 142%;
+      width: 316px;
+      margin: 0 auto;
+    }
+  }
+
+  .section h3 {
+    margin: 16px auto;
+    width: 530px;
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

@@ -1,0 +1,46 @@
+@mixin mobileButton {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  color: #3a80ba;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin buttonBlue {
+  width: 220px;
+  height: 56px;
+  background: #3a80ba;
+  border-radius: 8px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin sectionTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+@mixin sectionDescr {
+  // font-style: normal;
+  // font-weight: normal;
+  font-size: 20px;
+  line-height: 142%;
+  text-align: center;
+  color: #7e7e7e;
+}
+
+@mixin mobileListItem {
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 32px;
+  display: block;
+  text-align: center;
+}

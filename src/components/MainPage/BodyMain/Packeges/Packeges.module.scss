@@ -1,0 +1,172 @@
+@import "../../../../sass/state";
+
+.section {
+  padding: 0 30px;
+  background-image: url(../../../../images/packeges_back.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 260px;
+  margin: 0 auto;
+
+  &_title {
+    @include sectionTitle color: #1a1a1a;
+  }
+
+  &_descr {
+    @include sectionDescr;
+  }
+
+  &_list {
+    list-style: none;
+    padding: 0;
+    width: 260px;
+    margin: 0 auto;
+
+    &_item {
+      @include mobileListItem;
+      padding: 20px;
+      margin-bottom: 30px;
+
+      &_price {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 30px;
+        text-align: center;
+        color: #1a1a1a;
+      }
+
+      &_descr {
+        color: #7e7e7e;
+      }
+
+      &_button {
+        @include buttonBlue;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+      }
+    }
+
+    &_item h4 {
+      margin: 0 auto 10px;
+    }
+  }
+
+  &_info {
+    text-align: center;
+    color: #7e7e7e;
+  }
+
+  &_info a {
+    font-weight: bold;
+    color: #3a80ba;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .section {
+    width: 706px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .section {
+    width: 864px;
+    padding: 0 80px;
+    background-size: contain;
+
+    &_title {
+      width: 440px;
+      margin: 80px auto 24px;
+    }
+
+    &_descr {
+      width: 640px;
+      margin: 0 auto 32px;
+    }
+
+    &_list {
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+
+      &_item {
+        width: 27%;
+        font-size: 16px;
+        line-height: 162%;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+
+        &_button {
+          cursor: pointer;
+        }
+
+        &_price {
+          transition: all 300ms ease-in-out;
+        }
+      }
+
+      &_item:hover {
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+        }
+
+      &_item:hover .section_list_item_price {
+        transform: scale(1.4);
+        color: #3a80ba;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .section {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 0 130px;
+
+    &_title {
+      width: 560px;
+      font-size: 32px;
+      line-height: 39px;
+    }
+
+    &_list {
+      width: 100%;
+      justify-content: space-between;
+
+      &_item {
+        width: 380px;
+        height: 627px;
+        padding: 0;
+
+        &_price {
+          margin: 16px auto 24px;
+          font-size: 48px;
+          line-height: 59px;
+        }
+
+        &_descr {
+          width: 222px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 162%;
+        }
+
+        &_button {
+          margin: 30px auto 40px;
+        }
+      }
+
+      &_item h4 {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 32px auto 19px;
+      }
+    }
+
+    &_info {
+      font-size: 20px;
+      line-height: 142%;
+    }
+  }
+}

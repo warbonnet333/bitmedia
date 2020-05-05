@@ -1,0 +1,16 @@
+.smallHeader {
+  height: 72px;
+  background: #3a80ba;
+  padding-top: 15px;
+
+  &_logo {
+    margin-left: 130px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    color: #ffffff;
+    align-self: center;
+    height: 100%; 
+  }
+}

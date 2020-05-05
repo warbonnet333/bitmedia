@@ -1,0 +1,57 @@
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  margin: 0;
+  margin: 60px 0 0 130px;
+}
+
+.table {
+  width: 1180px;
+  margin: 16px auto 0;
+  border-collapse: separate;
+  border-radius: 1em;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+
+  &_head {
+    background: #3a80ba;
+  }
+
+  &_head tr {
+    height: 48px;
+  }
+
+  &_head th {
+    color: #ffffff;
+    font-weight: normal;
+  }
+
+  &_body {
+    &_row {
+      height: 32px;
+      background: #fbfbfb;
+      cursor: pointer;
+    }
+
+    &_row:nth-child(even) {
+      background: #f1f1f1;
+    }
+
+    &_id {
+      width: 64px;
+    }
+
+    &_id,
+    &_gender,
+    &_ip_address {
+      text-align: center;
+    }
+
+    &_first_name,
+    &_last_name,
+    &_email {
+      padding-left: 24px;
+    }
+  }
+}
