@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { withRouter } from "react-router-dom"
 import dataArr from "../../server/users_statistic.json"
 import getIdFromProps from "../../service/getIdFromProps"
+import SmallHeader from "../SmallHeader/SmallHeader"
+import SmallFooter from "../SmallFooter/SmallFooter"
 
 class UserPage extends Component {
   state = {
@@ -15,7 +17,12 @@ class UserPage extends Component {
   }
 
   render() {
-    return (`User page number`)
+    return (
+      <>
+        <SmallHeader />
+        <SmallFooter />
+      </>
+    )
   }
 }
 

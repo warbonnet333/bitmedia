@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import style from "./FooterMain.module.scss"
+import {Link} from "react-router-dom"
 
 class FooterMain extends Component {
   render() {
@@ -10,7 +11,7 @@ class FooterMain extends Component {
           <button className={style.button}>Subscribe</button>
         </form>
         <div className={style.footer_info}>
-          <span className={style.footer_info_logo}><a href="https://www.google.com.ua/">AppCo</a></span>
+          <span className={style.footer_info_logo}><Link to="/">AppCo</Link></span>
           <span className={style.footer_info_rights}>All rights reserved by ThemeTags</span>
           <span className={style.footer_info_year}>Copyrights © 2019.</span>
         </div>

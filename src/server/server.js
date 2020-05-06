@@ -1,8 +1,10 @@
+const userModel = require("./models/User");
 const usersData = require("./users.json");
-// const statsData = require("./users_statistic.json");
-const { Sequelize, DataTypes } = require("sequelize");
+const { Sequelize } = require("sequelize");
 const express = require("express");
 const cors = require("cors");
+// const statsData = require("./users_statistic.json");
+// const clickModel = require("./models/Click")
 
 let app;
 let port;
@@ -33,64 +35,13 @@ app.listen(port, () => {
   console.log("App is listening on port: ", port);
 });
 
-const User = sequelize.define(
-  "User",
-  {
-    id: { type: Sequelize.NUMBER, allowNull: false, primaryKey: true },
-    first_name: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    last_name: {
-      type: Sequelize.STRING,
-      // allowNull defaults to true
-    },
-    email: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    gender: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    ip_address: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-  },
-  {
-    timestamps: false,
-  }
-);
+const User = sequelize.define("User", userModel, {
+  timestamps: false,
+});
 
-// const Click = sequelize.define(
-//   "Click",
-//   {
-//     user_id: {
-//       type: Sequelize.NUMBER,
-//       allowNull: false,
-//       type: DataTypes.INTEGER,
-//       // references: {
-//       //   model: User,
-//       //   key: "id",
-//       // },
-//     },
-//     date: { type: Sequelize.NUMBER, allowNull: true },
-//     page_views: { type: Sequelize.NUMBER, allowNull: true },
-//     clicks: { type: Sequelize.NUMBER, allowNull: true },
-//     id: {
-//       type: DataTypes.UUID,
-//       defaultValue: Sequelize.UUIDV4,
-//       autoIncrement: true,
-//       primaryKey: true,
-//       field: "id",
-//       unique: true,
-//     },
-//   },
-//   {
-//     timestamps: false,
-//   }
-// );
+// const Click = sequelize.define("Click", clickModel, {
+//   timestamps: false,
+// });
 
 sequelize.sync({
   logging: console.log,

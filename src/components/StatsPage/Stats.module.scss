@@ -3,10 +3,9 @@
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  background-color: forestgreen;
   list-style: none;
-  width: auto;
-  
+  width: 450px;
+  padding: 0;
 
   &_prev,
   &_next,
@@ -16,5 +15,40 @@
     border: 2px solid #f1f1f1;
     box-sizing: border-box;
     border-radius: 8px;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  &_item {
+    text-align: center;
+
+    &_active {
+      border: 2px solid #3a80ba;
+      background: #3a80ba;
+      border-radius: 8px;
+    }
+
+    &_link {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #1a1a1a;
+      align-self: center;
+      height: 33px;
+      padding-top: 11px;
+
+      &_active {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &_prev,
+  &_next {
+    color: darkgreen;
+    border: none;
   }
 }
