@@ -1,0 +1,20 @@
+.paginationBox {
+  margin: 25px auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  background-color: forestgreen;
+  list-style: none;
+  width: auto;
+  
+
+  &_prev,
+  &_next,
+  &_item {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+}

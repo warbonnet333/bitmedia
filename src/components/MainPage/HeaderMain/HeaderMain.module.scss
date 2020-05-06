@@ -45,19 +45,17 @@ html {
   &_button {
     @include mobileButton;
     padding-top: 10px;
-  }
-
-  &_button a {
     text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    color: #3a80ba;
-    width: 100%;
-    height: 100%;
   }
 
   &_mobile {
     display: none;
   }
+}
+
+.header a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media all and (min-width: 768px) {

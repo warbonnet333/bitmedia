@@ -1,7 +1,15 @@
 import React, { Component } from "react"
 import style from "./Table.module.scss"
+import { withRouter } from "react-router-dom"
 
 class Table extends Component {
+
+  chooseUser = (id) => {
+    this.props.history.push({
+      pathname: `/stats/${id}`
+    }
+    )
+  }
 
 
   render() {
@@ -18,13 +26,13 @@ class Table extends Component {
               <th>Email</th>
               <th>Gender</th>
               <th>Ip address</th>
-              <th>Total clicks</th>
-              <th>Totsl page views</th>
+              {/* <th>Total clicks</th> */}
+              {/* <th>Totsl page views</th> */}
             </tr>
           </thead>
           <tbody className={style.table_body}>
             {users.map(({ id, first_name, last_name, email, gender, ip_address }) =>
-              <tr key={id} className={style.table_body_row}>
+              <tr key={id} className={style.table_body_row} onClick={() => this.chooseUser(id)}>
                 <td className={style.table_body_id}>{id}</td>
                 <td className={style.table_body_first_name}>{first_name}</td>
                 <td className={style.table_body_last_name}>{last_name}</td>
@@ -40,4 +48,4 @@ class Table extends Component {
   }
 }
 
-export default Table
+export default withRouter(Table)

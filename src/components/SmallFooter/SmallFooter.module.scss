@@ -1,0 +1,31 @@
+.footer {
+  height: 57px;
+  // width: 100vw;
+  background: #1c3b55;
+  color: #ffffff;
+
+  &_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0 0 0;
+  }
+
+  &_logo {
+    width: 82px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &_logo a {
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
