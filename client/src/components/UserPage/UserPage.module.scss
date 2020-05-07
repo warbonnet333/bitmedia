@@ -1,0 +1,28 @@
+@import "../../sass/state";
+
+.history {
+  width: 1024px;
+  margin: 16px auto 0;
+
+  &_link {
+    @include history_prev_link;
+  }
+
+  &_curent {
+    color: #3a80ba;
+    cursor: pointer;
+  }
+}
+
+.userName {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+  color: #1a1a1a;
+  margin-bottom: 0;
+}
+
+.history svg {
+  margin: 0 8px;
+}
